@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee</title>
+</head>
+<body>
+	
+	<th:block th:replace="Header.html"></th:block>
+
+		<div class="container-fluid">
+			<div class="card">
+				<div class="card-header bg-info text-white text-center"><h5>Employee Edit</h5></div>
+				<div class="card-body">
+					
+				<form action="/employee/update" method="post" th:object="${emp}">	
+				<div class="row" p-2>
+						<div class="col-4">Department Name</div>
+						<div class="col-6">
+							<input type="text" th:field="*{deptName}" class="form-control">
+						</div>
+				</div>
+				
+				<div class="row" p-2>
+						<div class="col-4">Department Head(HOD)</div>
+						<div class="col-6">
+							<input type="text" th:field="*{deptHead}" class="form-control">
+						</div>
+				</div>
+				
+				<div class="row" p-2>
+						<div class="col-4">Department Phone</div>
+						<div class="col-6">
+							<input type="text" th:field="*{deptPhone}" class="form-control">
+						</div>
+				</div>
+				
+				
+				<div class="row p-2">
+						<div class="col-4"></div>
+						<div class="col-6">
+							<input type="submit" value="Update" class="btn btn-success bth-lg">
+						</div>
+				</div>
+					
+					<input type="hidden" th:field="*{id}">
+				</form>
+				
+				</div>
+				
+				<div class="card-footer text-center bg-warning">copyright@2025</div>
+		</div>	
+	</div>
+</body>
+</html>

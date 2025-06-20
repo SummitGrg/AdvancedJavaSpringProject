@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Department List</title>
+
+</head>
+<body>
+
+	<th:block th:replace="Header.html"></th:block>
+	
+	<div class="container-fluid">
+			<div class="card">
+				<div class="card-header bg-info text-white text-center">
+				<h5>Department List</h5>
+				</div>
+				
+				<div class="card-body">
+					
+					<table class="table table-bordered table-striped">
+						<div class="p-2">
+							<a href="/department/excel"><input type="submit" value="Excel" class="btn btn-success"></a>
+							<a href="/department/pdf"><input type="submit" value="Pdf" class="btn btn-warning"></a>
+						</div>
+						
+						<thead>
+							<tr>
+								<th>Department Name</th>
+								<th>Department Head(HOD)</th>
+								<th>Department Phone</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr th:each="department: ${dList}">
+								<td th:text="${department.deptName}"></td>
+								<td th:text="${department.deptHead}"></td>
+								<td th:text="${department.deptPhone}"></td>		
+								<td>
+									<a th:href="@{/department/edit(id=${department.id})}"> <input type="submit" value="Edit" class="btn btn-info"></a>
+									<a th:href="@{/department/delete(id=${department.id})}"> <input type="submit" value="Delete" class="btn btn-danger"></a>
+									
+								</td>
+								</tr>
+						</tbody>				
+					</table>
+				
+				</div>
+				<div class="card-footer text-center bg-warning">copyright@2025</div>
+		</div>	
+	</div>
+</body>
+</html>

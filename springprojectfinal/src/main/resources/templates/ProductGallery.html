@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>productGallery</title>
+</head>
+<body>
+	
+	<th:block th:replace="Header.html"></th:block>
+		
+		<div class="container-fluid">
+			<div class="card">
+				<div class="card-header bg-info text-white text-center">
+				<h5>Product Gallery</h5>
+				</div>
+				<div class="card-body">
+				
+					<span th:each="prod : ${productList}">
+						<img class="p-2" th:src="@{${prod.image}}" width="300" height="300">
+					</span>
+				
+				
+				<div class="card-footer text-center bg-warning">copyright@2025</div>
+		</div>	
+
+</body>
+</html>
