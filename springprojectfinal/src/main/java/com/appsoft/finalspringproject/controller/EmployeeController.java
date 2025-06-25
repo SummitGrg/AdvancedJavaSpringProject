@@ -16,6 +16,8 @@ import com.appsoft.finalspringproject.service.DepartmentService;
 import com.appsoft.finalspringproject.service.EmployeeService;
 import com.appsoft.finalspringproject.utils.DepartmentExcelView;
 import com.appsoft.finalspringproject.utils.DepartmentPdfView;
+import com.appsoft.finalspringproject.utils.EmpExcelView;
+import com.appsoft.finalspringproject.utils.EmpPdfView;
 
 @Controller
 @RequestMapping("/employee")
@@ -62,6 +64,13 @@ public class EmployeeController {
 		return "EmployeeEditForm";
 	}
 	
+	@GetMapping("/view")
+	public String viewEmployee(@RequestParam("id") int id, Model model) {
+		
+		model.addAttribute("emp", employeeService.getEmpById(id));
+		return "EmployeeViewForm";
+	}
+	
 	@PostMapping("/update")
 	public String updateEmployee(@ModelAttribute Employee emp) {
 		
@@ -69,23 +78,24 @@ public class EmployeeController {
 		return "redirect:list";
 	}
 
-/*
+
 	@GetMapping("/excel")
 	public ModelAndView excel() {
 		
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("dList",employeeService.getAllEmp());
-		mv.setView(new EmployeeExcelView());		
+		mv.addObject("eList",employeeService.getAllEmp());
+		mv.setView(new EmpExcelView());		
 		return mv;
 	}
+	
 	
 	@GetMapping("/pdf")
 	public ModelAndView pdf() {
 		
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("dList",employeeService.getAllEmp());
-		mv.setView(new EmployeePdfView());		
+		mv.addObject("eList",employeeService.getAllEmp());
+		mv.setView(new EmpPdfView());		
 		return mv;
-	}*/
+	}
 	
 }

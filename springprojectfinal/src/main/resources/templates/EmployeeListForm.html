@@ -29,15 +29,6 @@
 								<th>Gender</th>
 								<th>Phone</th>
 								<th>Email</th>
-								<th>DOB</th>
-								<th>Company</th>
-								<th>Department</th>
-								<th>Post</th>
-								<th>Salary</th>
-								<th>Project</th>
-								<th>Address</th>
-								<th>Action</th>
-								
 								
 							</tr>
 						</thead>
@@ -49,17 +40,11 @@
 								<td th:text="${employee.gender}"></td>	
 								<td th:text="${employee.phone}"></td>
 								<td th:text="${employee.email}"></td>
-								<td th:text="${employee.dob}"></td>
-								<td th:text="${employee.company}"></td>
-								<td th:text="${employee.department}"></td>
-								<td th:text="${employee.post}"></td>
-								<td th:text="${employee.salary}"></td>
-								<td th:text="${employee.projects}"></td>
-								<td th:text="${employee.address}"></td>
 								
 								
 																	
 								<td>
+									<a th:href="@{/employee/view(id=${employee.id})}"> <input type="submit" value="View" class="btn btn-info"></a>
 									<a th:href="@{/employee/edit(id=${employee.id})}"> <input type="submit" value="Edit" class="btn btn-info"></a>
 									<a th:href="@{/employee/delete(id=${employee.id})}"> <input type="submit" value="Delete" class="btn btn-danger"></a>
 									

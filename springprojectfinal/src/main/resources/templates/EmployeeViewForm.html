@@ -2,131 +2,125 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Employee</title>
+<title>Employee Details</title>
 </head>
 <body>
-	
+
 	<th:block th:replace="Header.html"></th:block>
 
 		<div class="container-fluid">
 			<div class="card">
-				<div class="card-header bg-info text-white text-center"><h5>Employee Edit</h5></div>
+				<div class="card-header bg-info text-white text-center"><h5>Employee Details</h5></div>
 				<div class="card-body">
 					
-				<form action="/employee/update" method="post" th:object="${emp}">	
+				<form action="/employee/view" method="post" th:object="${emp}">	
 				<div class="row" p-2>
 						<div class="col-4">First Name</div>
 						<div class="col-6">
-							<input type="text" th:field="*{fname}" class="form-control">
+							<input type="text" th:field="*{fname}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">Last Name</div>
 						<div class="col-6">
-							<input type="text" th:field="*{lname}" class="form-control">
+							<input type="text" th:field="*{lname}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">Gender</div>
 						<div class="col-6">
-							<input type="text" th:field="*{gender}" class="form-control">
+							<input type="text" th:field="*{gender}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">Phone</div>
 						<div class="col-6">
-							<input type="text" th:field="*{phone}" class="form-control">
+							<input type="text" th:field="*{phone}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">Email</div>
 						<div class="col-6">
-							<input type="text" th:field="*{email}" class="form-control">
+							<input type="text" th:field="*{email}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">DOB</div>
 						<div class="col-6">
-							<input type="text" th:field="*{dob}" class="form-control">
+							<input type="text" th:field="*{dob}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">Company</div>
 						<div class="col-6">
-							<input type="text" th:field="*{company}" class="form-control">
+							<input type="text" th:field="*{company}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">Department</div>
 						<div class="col-6">
-							<input type="text" th:field="*{department}" class="form-control">
+							<input type="text" th:field="*{department}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">Post</div>
 						<div class="col-6">
-							<input type="text" th:field="*{post}" class="form-control">
+							<input type="text" th:field="*{post}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">Salary</div>
 						<div class="col-6">
-							<input type="text" th:field="*{salary}" class="form-control">
+							<input type="text" th:field="*{salary}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">Country</div>
 						<div class="col-6">
-							<input type="text" th:field="*{address.country}" class="form-control">
+							<input type="text" th:field="*{address.country}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">City</div>
 						<div class="col-6">
-							<input type="text" th:field="*{address.city}" class="form-control">
+							<input type="text" th:field="*{address.city}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">State</div>
 						<div class="col-6">
-							<input type="text" th:field="*{address.state}" class="form-control">
+							<input type="text" th:field="*{address.state}" class="form-control" disabled/>
 						</div>
 				</div>
 				
 				<div class="row" p-2>
 						<div class="col-4">ZipCode</div>
 						<div class="col-6">
-							<input type="text" th:field="*{address.zipcode}" class="form-control">
+							<input type="text" th:field="*{address.zipcode}" class="form-control" disabled/>
 						</div>
 				</div>
 		
 				<div class="row" p-2>
 						<div class="col-4">Project</div>
 						<div class="col-6">
-							<input type="text" th:field="*{projects}" class="form-control">
+							<input type="text" th:field="*{projects}" class="form-control" disabled/>
 						</div>
 				</div>
 				
-				<div class="row p-2">
-						<div class="col-4"></div>
-						<div class="col-6">
-							<input type="submit" value="Update" class="btn btn-success bth-lg">
-						</div>
-				</div>
 					
-					<input type="hidden" th:field="*{id}">
+					
 				</form>
 				
 				</div>
@@ -134,5 +128,6 @@
 				<div class="card-footer text-center bg-warning">copyright@2025</div>
 		</div>	
 	</div>
+
 </body>
 </html>
