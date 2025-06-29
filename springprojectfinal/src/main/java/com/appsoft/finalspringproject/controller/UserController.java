@@ -101,4 +101,10 @@ public class UserController {
 		
 		return "Profile";
 	}
+	
+	@GetMapping("/home")
+	public String getHome() {
+		
+		return "Home";
+	}
 }
